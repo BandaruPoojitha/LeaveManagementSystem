@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This web.xml file is not required when using Servlet 3.0 container,
+     see implementation details http://jersey.java.net/nonav/documentation/latest/jax-rs.html -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>Assessment2.EmployeeLeaveManagementSystem</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <url-pattern>/webapi/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Login</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>controller.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Admin</display-name>
+    <servlet-name>Admin</servlet-name>
+    <servlet-class>controller.Admin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Admin</servlet-name>
+    <url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Employee</display-name>
+    <servlet-name>Employee</servlet-name>
+    <servlet-class>controller.Employee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Employee</servlet-name>
+    <url-pattern>/Employee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Employees</display-name>
+    <servlet-name>Employees</servlet-name>
+    <servlet-class>controller.Employees</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Employees</servlet-name>
+    <url-pattern>/Employees</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminOperations</display-name>
+    <servlet-name>AdminOperations</servlet-name>
+    <servlet-class>controller.AdminOperations</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminOperations</servlet-name>
+    <url-pattern>/AdminOperations</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeOperations</display-name>
+    <servlet-name>EmployeeOperations</servlet-name>
+    <servlet-class>controller.EmployeeOperations</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeOperations</servlet-name>
+    <url-pattern>/EmployeeOperations</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStatus</display-name>
+    <servlet-name>UpdateStatus</servlet-name>
+    <servlet-class>controller.UpdateStatus</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStatus</servlet-name>
+    <url-pattern>/UpdateStatus</url-pattern>
+  </servlet-mapping>
+  <!-- servlet>
+    <description></description>
+    <display-name>Log</display-name>
+    <servlet-name>Log</servlet-name>
+    <servlet-class>controller.Log</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Log</servlet-name>
+    <url-pattern>/Log</url-pattern>
+  </servlet-mapping>  -->
+</web-app>
